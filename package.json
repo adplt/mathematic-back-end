@@ -10,6 +10,7 @@
     "test": "mocha tools/babel.tool.js \"app/test/*.test.js\" --reporter progress",
     "lint": "echo 'Running lint...' && eslint app/",
     "lint:fix": "eslint app/ --fix",
+    "prepush": "npm run lint && npm run test",
     "heroku-prebuild": "yarn"
   },
   "dependencies": {
@@ -31,7 +32,14 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
-    "eslint": "^4.11.0"
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^4.11.0",
+    "husky": "^0.14.3",
+    "mocha": "^4.0.1"
   },
-  "cacheDirectories": ["client/node_modules", "server/node_modules"]
+  "cacheDirectories": [
+    "client/node_modules",
+    "server/node_modules"
+  ]
 }

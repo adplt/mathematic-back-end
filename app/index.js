@@ -2,7 +2,6 @@ import app from './app';
 import debug from 'debug';
 import http from 'http';
 
-require('babel-register')();
 debug('mathematic-back-end:server');
 
 const normalizePort = (val) => {
@@ -49,3 +48,5 @@ app.set('port', port);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+export default server;
