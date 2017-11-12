@@ -10,8 +10,7 @@
     "test": "mocha tools/babel.tool.js \"app/test/*.test.js\" --reporter progress",
     "lint": "echo 'Running lint...' && eslint app/",
     "lint:fix": "eslint app/ --fix",
-    "heroku-prebuild": "yarn",
-    "poststart": "npm prune --production"
+    "heroku-prebuild": "yarn"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
