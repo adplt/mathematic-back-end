@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "DEBUG=planatrip-back-end:* nodemon ./app/index.js --exec babel-node --presets es2015,stage-2",
-    "test": "mocha tools/babel.tool.js \"app/test/*.test.js\" --reporter progress",
+    "test": "mocha tools/babel.tool.js \"app/test/*.test.js\" --reporter progress --exit",
     "lint": "echo 'Running lint...' && eslint app/",
     "lint:fix": "eslint app/ --fix",
     "prepush": "npm run lint && npm run test",
